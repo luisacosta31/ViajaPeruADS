@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="UMLModelConfigurationPage.TemplateConfiguration">
 		<section name="RootElementBlock">
-			<item value="Model" key="com.ibm.xtools.modeler.templates.blankBusinessModel"/>
+			<item value="Model" key="com.ibm.xtools.modeler.templates.blankUseCaseModel"/>
 		</section>
 	</section>
 </section>
