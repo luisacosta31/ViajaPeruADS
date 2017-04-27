@@ -53,7 +53,7 @@
         <children xmi:type="notation:BasicDecorationNode" xmi:id="_bYGrQSr4EeeaE43lWzp_Kw" type="Name"/>
         <children xmi:type="notation:BasicDecorationNode" xmi:id="_bYGrQir4EeeaE43lWzp_Kw" type="Parent"/>
         <children xmi:type="notation:ListCompartment" xmi:id="_bYGrQyr4EeeaE43lWzp_Kw" visible="false" type="Extension_Points"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bYGEMSr4EeeaE43lWzp_Kw" x="7788" y="1584"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bYGEMSr4EeeaE43lWzp_Kw" x="7788" y="1980"/>
       </children>
       <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_e9HDECr4EeeaE43lWzp_Kw" element="_01dBoCrzEeeaE43lWzp_Kw" fontName="Segoe UI" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Label">
         <children xmi:type="notation:DecorationNode" xmi:id="_e9HDEir4EeeaE43lWzp_Kw" type="ImageCompartment">
