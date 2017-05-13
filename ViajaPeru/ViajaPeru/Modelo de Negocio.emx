@@ -421,7 +421,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_yb1s5CV3EeeOxdnZ-DjLSA" type="Stereotype"/>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_yb1s5SV3EeeOxdnZ-DjLSA" type="Name"/>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_yb1s5iV3EeeOxdnZ-DjLSA" type="Parent"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yb1s4SV3EeeOxdnZ-DjLSA" x="792" y="792"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yb1s4SV3EeeOxdnZ-DjLSA" x="924" y="1056"/>
           </children>
           <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_2vG44SV3EeeOxdnZ-DjLSA" element="_2vG44CV3EeeOxdnZ-DjLSA" fontName="Segoe UI" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Image" useClassifierShape="true">
             <children xmi:type="notation:DecorationNode" xmi:id="_2vG44yV3EeeOxdnZ-DjLSA" type="ImageCompartment">
@@ -430,7 +430,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_2vG45SV3EeeOxdnZ-DjLSA" type="Stereotype"/>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_2vG45iV3EeeOxdnZ-DjLSA" type="Name"/>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_2vG45yV3EeeOxdnZ-DjLSA" type="Parent"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2vG44iV3EeeOxdnZ-DjLSA" x="5148" y="1056"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2vG44iV3EeeOxdnZ-DjLSA" x="5016" y="1056"/>
           </children>
           <element xsi:nil="true"/>
         </contents>
