@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LogicalDataModel="http:///com/ibm/db/models/logical/logical.ecore">
+  <LogicalDataModel:Package xmi:id="_eC-eoDwmEeed5ceJJB78IA" name="Modelo de análisis" children="_eC_syzwmEeed5ceJJB78IA _eC_syjwmEeed5ceJJB78IA _eC_szDwmEeed5ceJJB78IA _eC_szjwmEeed5ceJJB78IA _eC_szTwmEeed5ceJJB78IA _eC_syTwmEeed5ceJJB78IA" contents="_eC-eoTwmEeed5ceJJB78IA _eC-erzwmEeed5ceJJB78IA _eC-euDwmEeed5ceJJB78IA _eC_FwzwmEeed5ceJJB78IA _eC_F7DwmEeed5ceJJB78IA _eC_F8DwmEeed5ceJJB78IA _eC_GBjwmEeed5ceJJB78IA _eC_GDjwmEeed5ceJJB78IA _eC_GFTwmEeed5ceJJB78IA _eC_GHDwmEeed5ceJJB78IA _eC_swDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Entity xmi:id="_eC-eoTwmEeed5ceJJB78IA" name="Usuario" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC-etjwmEeed5ceJJB78IA _eC_F5zwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC-eojwmEeed5ceJJB78IA" name="id_cliente" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC-eozwmEeed5ceJJB78IA" name="nom_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-epDwmEeed5ceJJB78IA" name="apepat_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-epTwmEeed5ceJJB78IA" name="apemat_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-epjwmEeed5ceJJB78IA" name="sexo_cliente" dataType="INTEGER"/>
+    <attributes xmi:id="_eC-epzwmEeed5ceJJB78IA" name="dni" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-eqDwmEeed5ceJJB78IA" name="correo_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-eqTwmEeed5ceJJB78IA" name="direccion_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-eqjwmEeed5ceJJB78IA" name="nrotarjeta_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-eqzwmEeed5ceJJB78IA" name="fecnac_cliente" dataType="DATE"/>
+    <attributes xmi:id="_eC-erDwmEeed5ceJJB78IA" name="contra_cliente" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-erTwmEeed5ceJJB78IA" name="id_tipo" dataType="INTEGER"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC-erjwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC-eojwmEeed5ceJJB78IA" relationshipEnds="_eC-etjwmEeed5ceJJB78IA _eC_F5zwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC-erzwmEeed5ceJJB78IA" name="TipoUsuario" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_FwTwmEeed5ceJJB78IA _eC-etzwmEeed5ceJJB78IA" relationships="_eC-etTwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC-esDwmEeed5ceJJB78IA" name="id_tipo" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC-esTwmEeed5ceJJB78IA" name="des_tipo" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC-esjwmEeed5ceJJB78IA" name="usuarioId_cliente" dataType="INTEGER" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC-eszwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC-esDwmEeed5ceJJB78IA" relationshipEnds="_eC_FwTwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC-etDwmEeed5ceJJB78IA" name="ForeignKey1" attributes="_eC-esjwmEeed5ceJJB78IA" relationshipEnds="_eC-etzwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_eC-etTwmEeed5ceJJB78IA" relationshipType="NON_IDENTIFYING" owningEntity="_eC-erzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC-etjwmEeed5ceJJB78IA" verbPhrase="tipoUsuario" entity="_eC-eoTwmEeed5ceJJB78IA" key="_eC-erjwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC-etzwmEeed5ceJJB78IA" verbPhrase="usuario" cardinality="ONE" entity="_eC-erzwmEeed5ceJJB78IA" key="_eC-etDwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_eC-euDwmEeed5ceJJB78IA" name="Trabajador" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_F4TwmEeed5ceJJB78IA _eC_FwjwmEeed5ceJJB78IA" relationships="_eC_FwDwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC-euTwmEeed5ceJJB78IA" name="id_trabajador" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_FsDwmEeed5ceJJB78IA" name="nom_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FsTwmEeed5ceJJB78IA" name="apepat_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FsjwmEeed5ceJJB78IA" name="apemat_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FszwmEeed5ceJJB78IA" name="sexo_trabajador" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FtDwmEeed5ceJJB78IA" name="dni_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FtTwmEeed5ceJJB78IA" name="correo_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FtjwmEeed5ceJJB78IA" name="fecnac_trabajador" dataType="DATE"/>
+    <attributes xmi:id="_eC_FtzwmEeed5ceJJB78IA" name="feccom_trabajador" dataType="DATE"/>
+    <attributes xmi:id="_eC_FuDwmEeed5ceJJB78IA" name="estado_trabajador" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FuTwmEeed5ceJJB78IA" name="direccion_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FujwmEeed5ceJJB78IA" name="usuario_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FuzwmEeed5ceJJB78IA" name="contra_trabajador" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FvDwmEeed5ceJJB78IA" name="id_tipo" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FvTwmEeed5ceJJB78IA" name="tipoUsuarioId_tipo" dataType="INTEGER" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_FvjwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC-euTwmEeed5ceJJB78IA" relationshipEnds="_eC_F4TwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_FvzwmEeed5ceJJB78IA" name="ForeignKey1" attributes="_eC_FvTwmEeed5ceJJB78IA" relationshipEnds="_eC_FwjwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_eC_FwDwmEeed5ceJJB78IA" relationshipType="NON_IDENTIFYING" owningEntity="_eC-euDwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_FwTwmEeed5ceJJB78IA" verbPhrase="trabajador" entity="_eC-erzwmEeed5ceJJB78IA" key="_eC-eszwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_FwjwmEeed5ceJJB78IA" verbPhrase="tipoUsuario" cardinality="ONE" entity="_eC-euDwmEeed5ceJJB78IA" key="_eC_FvzwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_eC_FwzwmEeed5ceJJB78IA" name="Itinerario" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_F3zwmEeed5ceJJB78IA _eC_F4jwmEeed5ceJJB78IA _eC_F5TwmEeed5ceJJB78IA _eC_F6DwmEeed5ceJJB78IA _eC_F6zwmEeed5ceJJB78IA" relationships="_eC_F3TwmEeed5ceJJB78IA _eC_F4DwmEeed5ceJJB78IA _eC_F4zwmEeed5ceJJB78IA _eC_F5jwmEeed5ceJJB78IA _eC_F6TwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_FxDwmEeed5ceJJB78IA" name="id_itinerario" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_FxTwmEeed5ceJJB78IA" name="fecsalida_itinerario" dataType="DATE"/>
+    <attributes xmi:id="_eC_FxjwmEeed5ceJJB78IA" name="fecllegada_itinerario" dataType="DATE"/>
+    <attributes xmi:id="_eC_FxzwmEeed5ceJJB78IA" name="lugardestino_itinerario" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FyDwmEeed5ceJJB78IA" name="lugarllegada_itinerario" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_FyTwmEeed5ceJJB78IA" name="precio_itinerario" dataType="Decimal"/>
+    <attributes xmi:id="_eC_FyjwmEeed5ceJJB78IA" name="estado_itinerario" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FyzwmEeed5ceJJB78IA" name="id_mediotrans" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FzDwmEeed5ceJJB78IA" name="id_paquete" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FzTwmEeed5ceJJB78IA" name="id_usuario" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FzjwmEeed5ceJJB78IA" name="id_trabajador" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_FzzwmEeed5ceJJB78IA" name="medioTransporteId_mediotrans" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F0DwmEeed5ceJJB78IA" name="trabajadorId_trabajador" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F0TwmEeed5ceJJB78IA" name="comprobanteId_comprobante" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F0jwmEeed5ceJJB78IA" name="id_cliente" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F0zwmEeed5ceJJB78IA" name="guiaTuristicaId_gturistica" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F1DwmEeed5ceJJB78IA" name="movilidadId_movilidad" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F1TwmEeed5ceJJB78IA" name="hotelId_hotel" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F1jwmEeed5ceJJB78IA" name="paqueteId_paquete" dataType="INTEGER" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_F1zwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_F0zwmEeed5ceJJB78IA _eC_F1DwmEeed5ceJJB78IA _eC_F1TwmEeed5ceJJB78IA _eC_F1jwmEeed5ceJJB78IA _eC_F0jwmEeed5ceJJB78IA _eC_F0DwmEeed5ceJJB78IA _eC_FzzwmEeed5ceJJB78IA _eC_FxDwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F2DwmEeed5ceJJB78IA" name="ForeignKey1" attributes="_eC_FzzwmEeed5ceJJB78IA" relationshipEnds="_eC_F3zwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F2TwmEeed5ceJJB78IA" name="ForeignKey2" attributes="_eC_F0DwmEeed5ceJJB78IA" relationshipEnds="_eC_F4jwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F2jwmEeed5ceJJB78IA" name="ForeignKey3" attributes="_eC_F0TwmEeed5ceJJB78IA" relationshipEnds="_eC_F5TwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F2zwmEeed5ceJJB78IA" name="ForeignKey4" attributes="_eC_F0jwmEeed5ceJJB78IA" relationshipEnds="_eC_F6DwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F3DwmEeed5ceJJB78IA" name="ForeignKey5" attributes="_eC_F0zwmEeed5ceJJB78IA _eC_F1DwmEeed5ceJJB78IA _eC_F1TwmEeed5ceJJB78IA _eC_F1jwmEeed5ceJJB78IA" relationshipEnds="_eC_F6zwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_eC_F3TwmEeed5ceJJB78IA" owningEntity="_eC_FwzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F3jwmEeed5ceJJB78IA" verbPhrase="itinerario" entity="_eC_F7DwmEeed5ceJJB78IA" key="_eC_F7zwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F3zwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_FwzwmEeed5ceJJB78IA" key="_eC_F2DwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_F4DwmEeed5ceJJB78IA" owningEntity="_eC_FwzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F4TwmEeed5ceJJB78IA" verbPhrase="itinerario" entity="_eC-euDwmEeed5ceJJB78IA" key="_eC_FvjwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F4jwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_FwzwmEeed5ceJJB78IA" key="_eC_F2TwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_F4zwmEeed5ceJJB78IA" relationshipType="NON_IDENTIFYING" owningEntity="_eC_FwzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F5DwmEeed5ceJJB78IA" verbPhrase="itinerario" entity="_eC_GHDwmEeed5ceJJB78IA" key="_eC_GIDwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F5TwmEeed5ceJJB78IA" verbPhrase="comprobante" cardinality="ONE" entity="_eC_FwzwmEeed5ceJJB78IA" key="_eC_F2jwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_F5jwmEeed5ceJJB78IA" owningEntity="_eC_FwzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F5zwmEeed5ceJJB78IA" verbPhrase="itinerario" entity="_eC-eoTwmEeed5ceJJB78IA" key="_eC-erjwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F6DwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_FwzwmEeed5ceJJB78IA" key="_eC_F2zwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_F6TwmEeed5ceJJB78IA" owningEntity="_eC_FwzwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F6jwmEeed5ceJJB78IA" verbPhrase="itinerario" entity="_eC_F8DwmEeed5ceJJB78IA" key="_eC_F-TwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F6zwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_FwzwmEeed5ceJJB78IA" key="_eC_F3DwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_eC_F7DwmEeed5ceJJB78IA" name="MedioTransporte" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_F3jwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_F7TwmEeed5ceJJB78IA" name="id_mediotrans" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F7jwmEeed5ceJJB78IA" name="des_mediotranas" dataType="VARCHAR(32672)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_F7zwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_F7TwmEeed5ceJJB78IA" relationshipEnds="_eC_F3jwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC_F8DwmEeed5ceJJB78IA" name="Paquete" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_F_zwmEeed5ceJJB78IA _eC_GAjwmEeed5ceJJB78IA _eC_GBTwmEeed5ceJJB78IA _eC_F6jwmEeed5ceJJB78IA" relationships="_eC_F_TwmEeed5ceJJB78IA _eC_GADwmEeed5ceJJB78IA _eC_GAzwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_F8TwmEeed5ceJJB78IA" name="id_paquete" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F8jwmEeed5ceJJB78IA" name="precio_paquete" dataType="Decimal"/>
+    <attributes xmi:id="_eC_F8zwmEeed5ceJJB78IA" name="id_hotel" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_F9DwmEeed5ceJJB78IA" name="id_movilidad" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_F9TwmEeed5ceJJB78IA" name="id_gturistica" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_F9jwmEeed5ceJJB78IA" name="hotelId_hotel" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F9zwmEeed5ceJJB78IA" name="movilidadId_movilidad" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_F-DwmEeed5ceJJB78IA" name="guiaTuristicaId_gturistica" dataType="INTEGER" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_F-TwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_F-DwmEeed5ceJJB78IA _eC_F9zwmEeed5ceJJB78IA _eC_F9jwmEeed5ceJJB78IA _eC_F8TwmEeed5ceJJB78IA" relationshipEnds="_eC_F6jwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F-jwmEeed5ceJJB78IA" name="ForeignKey1" attributes="_eC_F9jwmEeed5ceJJB78IA" relationshipEnds="_eC_F_zwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F-zwmEeed5ceJJB78IA" name="ForeignKey2" attributes="_eC_F9zwmEeed5ceJJB78IA" relationshipEnds="_eC_GAjwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_F_DwmEeed5ceJJB78IA" name="ForeignKey3" attributes="_eC_F-DwmEeed5ceJJB78IA" relationshipEnds="_eC_GBTwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_eC_F_TwmEeed5ceJJB78IA" owningEntity="_eC_F8DwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_F_jwmEeed5ceJJB78IA" verbPhrase="paquete" entity="_eC_GBjwmEeed5ceJJB78IA" key="_eC_GDTwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_F_zwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_F8DwmEeed5ceJJB78IA" key="_eC_F-jwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_GADwmEeed5ceJJB78IA" owningEntity="_eC_F8DwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_GATwmEeed5ceJJB78IA" verbPhrase="paquete" entity="_eC_GDjwmEeed5ceJJB78IA" key="_eC_GFDwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_GAjwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_F8DwmEeed5ceJJB78IA" key="_eC_F-zwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Relationship xmi:id="_eC_GAzwmEeed5ceJJB78IA" owningEntity="_eC_F8DwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_GBDwmEeed5ceJJB78IA" verbPhrase="paquete" entity="_eC_GFTwmEeed5ceJJB78IA" key="_eC_GGzwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_GBTwmEeed5ceJJB78IA" cardinality="ZERO_TO_MANY" entity="_eC_F8DwmEeed5ceJJB78IA" key="_eC_F_DwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_eC_GBjwmEeed5ceJJB78IA" name="Hotel" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_F_jwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_GBzwmEeed5ceJJB78IA" name="id_hotel" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_GCDwmEeed5ceJJB78IA" name="nom_hotel" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GCTwmEeed5ceJJB78IA" name="nrohabitacion_hotel" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_GCjwmEeed5ceJJB78IA" name="direccion_hotel" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GCzwmEeed5ceJJB78IA" name="ubicacion_hotel" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GDDwmEeed5ceJJB78IA" name="precio_hotel" dataType="Decimal"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_GDTwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_GBzwmEeed5ceJJB78IA" relationshipEnds="_eC_F_jwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC_GDjwmEeed5ceJJB78IA" name="Movilidad" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_GATwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_GDzwmEeed5ceJJB78IA" name="id_movilidad" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_GEDwmEeed5ceJJB78IA" name="nomchofer_movilidad" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GETwmEeed5ceJJB78IA" name="numplaca_movilidad" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GEjwmEeed5ceJJB78IA" name="direccionchofer_movilidad" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GEzwmEeed5ceJJB78IA" name="precio_movilidad" dataType="Decimal"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_GFDwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_GDzwmEeed5ceJJB78IA" relationshipEnds="_eC_GATwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC_GFTwmEeed5ceJJB78IA" name="GuiaTuristica" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_GBDwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_GFjwmEeed5ceJJB78IA" name="id_gturistica" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_GFzwmEeed5ceJJB78IA" name="nom_gturistica" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GGDwmEeed5ceJJB78IA" name="numdias_gturistica" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_GGTwmEeed5ceJJB78IA" name="lugar_gturistica" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_GGjwmEeed5ceJJB78IA" name="precio_gturistica" dataType="Decimal"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_GGzwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_GFjwmEeed5ceJJB78IA" relationshipEnds="_eC_GBDwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC_GHDwmEeed5ceJJB78IA" name="Comprobante" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_sxzwmEeed5ceJJB78IA _eC_F5DwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_GHTwmEeed5ceJJB78IA" name="id_comprobante" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_GHjwmEeed5ceJJB78IA" name="id_mediopago" dataType="INTEGER"/>
+    <attributes xmi:id="_eC_GHzwmEeed5ceJJB78IA" name="id_itinerario" dataType="INTEGER"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_GIDwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_GHTwmEeed5ceJJB78IA" relationshipEnds="_eC_sxzwmEeed5ceJJB78IA _eC_F5DwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_eC_swDwmEeed5ceJJB78IA" name="MedioPago" package="_eC-eoDwmEeed5ceJJB78IA" relationshipEnds="_eC_syDwmEeed5ceJJB78IA" relationships="_eC_sxjwmEeed5ceJJB78IA">
+    <attributes xmi:id="_eC_swTwmEeed5ceJJB78IA" name="id_mediopago" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_eC_swjwmEeed5ceJJB78IA" name="des_mediopago" dataType="VARCHAR(32672)"/>
+    <attributes xmi:id="_eC_swzwmEeed5ceJJB78IA" name="comprobanteId_comprobante" dataType="INTEGER" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_eC_sxDwmEeed5ceJJB78IA" name="PrimaryKey" attributes="_eC_swTwmEeed5ceJJB78IA"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_eC_sxTwmEeed5ceJJB78IA" name="ForeignKey1" attributes="_eC_swzwmEeed5ceJJB78IA" relationshipEnds="_eC_syDwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_eC_sxjwmEeed5ceJJB78IA" relationshipType="NON_IDENTIFYING" owningEntity="_eC_swDwmEeed5ceJJB78IA">
+    <relationshipEnds xmi:id="_eC_sxzwmEeed5ceJJB78IA" verbPhrase="medioPago" entity="_eC_GHDwmEeed5ceJJB78IA" key="_eC_GIDwmEeed5ceJJB78IA"/>
+    <relationshipEnds xmi:id="_eC_syDwmEeed5ceJJB78IA" verbPhrase="comprobante" cardinality="ONE" entity="_eC_swDwmEeed5ceJJB78IA" key="_eC_sxTwmEeed5ceJJB78IA"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Package xmi:id="_eC_syTwmEeed5ceJJB78IA" name="PrimitiveTypes" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Package xmi:id="_eC_syjwmEeed5ceJJB78IA" name="Mantenimiento" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Package xmi:id="_eC_syzwmEeed5ceJJB78IA" name="Itinerario" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Package xmi:id="_eC_szDwmEeed5ceJJB78IA" name="Paquete Turístico" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Package xmi:id="_eC_szTwmEeed5ceJJB78IA" name="Pago" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+  <LogicalDataModel:Package xmi:id="_eC_szjwmEeed5ceJJB78IA" name="Cotización" targetNamespace="Modelo de análisis" parent="_eC-eoDwmEeed5ceJJB78IA"/>
+</xmi:XMI>
