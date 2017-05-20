@@ -28,8 +28,8 @@
                 <li><a href="#">Nuestras Promociones</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>Registrate</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                <li>@Html.ActionLink("Registrate", "Registrate_Usuario")</li>
+                <li>@Html.ActionLink("Iniciar Sesion", "Login")</li>
             </ul>
         </div>
     </nav>
@@ -51,7 +51,7 @@
 
     <hr />
     <footer>
-        <p style="color:white;">&copy;ViajaPeru. Todos los derechos reservados.</p>
+        <p style="color:white;">&copy;ViajaPeru. All rights reserved.</p>
     </footer>
 
 </body>
