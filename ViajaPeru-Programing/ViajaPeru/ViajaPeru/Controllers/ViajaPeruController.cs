@@ -13,5 +13,12 @@ namespace ViajaPeru.Controllers
         {
             return View();
         }
+
+
+        public ActionResult IniciaSession()
+        {
+
+            return View();
+        }
     }
 }
