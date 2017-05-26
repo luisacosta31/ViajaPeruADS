@@ -350,6 +350,7 @@
     <Content Include="Views\ViajaPeru\Index.cshtml" />
     <Content Include="Views\ViajaPeru\Login.cshtml" />
     <Content Include="Views\ViajaPeru\IniciaSession.cshtml" />
+    <Content Include="Views\Shared\_Layout_AfterLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
