@@ -30,6 +30,7 @@ namespace ViajaPeru.Models
         public string direccion_cliente { get; set; }
         public string nrotarjeta_cliente { get; set; }
         public System.DateTime fecnac_cliente { get; set; }
+        public string usuario_cliente { get; set; }
         public string contra_cliente { get; set; }
         public Nullable<int> id_tipo { get; set; }
     

@@ -25,7 +25,6 @@ namespace ViajaPeru.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tb_comprobante> tb_comprobante { get; set; }
         public virtual DbSet<tb_gturistica> tb_gturistica { get; set; }
         public virtual DbSet<tb_hoteles> tb_hoteles { get; set; }

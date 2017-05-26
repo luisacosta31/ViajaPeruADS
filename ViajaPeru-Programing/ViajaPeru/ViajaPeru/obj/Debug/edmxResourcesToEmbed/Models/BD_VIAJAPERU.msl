@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_VIAJAPERUModelStoreContainer" CdmEntityContainer="BD_VIAJAPERUEntities">
+    <EntitySetMapping Name="tb_comprobante">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_comprobante">
+        <MappingFragment StoreEntitySet="tb_comprobante">
+          <ScalarProperty Name="id_comprobante" ColumnName="id_comprobante" />
+          <ScalarProperty Name="id_mediopago" ColumnName="id_mediopago" />
+          <ScalarProperty Name="id_itinerario" ColumnName="id_itinerario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_gturistica">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_gturistica">
+        <MappingFragment StoreEntitySet="tb_gturistica">
+          <ScalarProperty Name="id_gturistica" ColumnName="id_gturistica" />
+          <ScalarProperty Name="nom_gturistica" ColumnName="nom_gturistica" />
+          <ScalarProperty Name="numdias_gturistica" ColumnName="numdias_gturistica" />
+          <ScalarProperty Name="lugar_gturistica" ColumnName="lugar_gturistica" />
+          <ScalarProperty Name="precio_gturistica" ColumnName="precio_gturistica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_hoteles">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_hoteles">
+        <MappingFragment StoreEntitySet="tb_hoteles">
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="nom_hotel" ColumnName="nom_hotel" />
+          <ScalarProperty Name="nrohabitacion_hotel" ColumnName="nrohabitacion_hotel" />
+          <ScalarProperty Name="direccion_hotel" ColumnName="direccion_hotel" />
+          <ScalarProperty Name="ubicacion_hotel" ColumnName="ubicacion_hotel" />
+          <ScalarProperty Name="precio_hotel" ColumnName="precio_hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_itinerario">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_itinerario">
+        <MappingFragment StoreEntitySet="tb_itinerario">
+          <ScalarProperty Name="id_itinerario" ColumnName="id_itinerario" />
+          <ScalarProperty Name="fecsalida_itinerario" ColumnName="fecsalida_itinerario" />
+          <ScalarProperty Name="fecllegada_itinerario" ColumnName="fecllegada_itinerario" />
+          <ScalarProperty Name="lugardestino_itinerario" ColumnName="lugardestino_itinerario" />
+          <ScalarProperty Name="lugarllegada_itinerario" ColumnName="lugarllegada_itinerario" />
+          <ScalarProperty Name="precio_itinerario" ColumnName="precio_itinerario" />
+          <ScalarProperty Name="estado_itinerario" ColumnName="estado_itinerario" />
+          <ScalarProperty Name="id_mediotrans" ColumnName="id_mediotrans" />
+          <ScalarProperty Name="id_paquete" ColumnName="id_paquete" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_mediopago">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_mediopago">
+        <MappingFragment StoreEntitySet="tb_mediopago">
+          <ScalarProperty Name="id_mediopago" ColumnName="id_mediopago" />
+          <ScalarProperty Name="des_mediopago" ColumnName="des_mediopago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_mediotrans">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_mediotrans">
+        <MappingFragment StoreEntitySet="tb_mediotrans">
+          <ScalarProperty Name="id_mediotrans" ColumnName="id_mediotrans" />
+          <ScalarProperty Name="des_mediotrans" ColumnName="des_mediotrans" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_movilidad">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_movilidad">
+        <MappingFragment StoreEntitySet="tb_movilidad">
+          <ScalarProperty Name="id_movilidad" ColumnName="id_movilidad" />
+          <ScalarProperty Name="nomchofer_movilidad" ColumnName="nomchofer_movilidad" />
+          <ScalarProperty Name="numplaca_movilidad" ColumnName="numplaca_movilidad" />
+          <ScalarProperty Name="direccionchofer_movilidad" ColumnName="direccionchofer_movilidad" />
+          <ScalarProperty Name="precio_movilidad" ColumnName="precio_movilidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_paquetes">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_paquetes">
+        <MappingFragment StoreEntitySet="tb_paquetes">
+          <ScalarProperty Name="id_paquete" ColumnName="id_paquete" />
+          <ScalarProperty Name="precio_paquete" ColumnName="precio_paquete" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="id_movilidad" ColumnName="id_movilidad" />
+          <ScalarProperty Name="id_gturistica" ColumnName="id_gturistica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_usuario">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_tipo_usuario">
+        <MappingFragment StoreEntitySet="tb_tipo_usuario">
+          <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+          <ScalarProperty Name="des_tipo" ColumnName="des_tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_trabajador">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_trabajador">
+        <MappingFragment StoreEntitySet="tb_trabajador">
+          <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+          <ScalarProperty Name="nom_trabajador" ColumnName="nom_trabajador" />
+          <ScalarProperty Name="apepat_trabajador" ColumnName="apepat_trabajador" />
+          <ScalarProperty Name="apemat_trabajador" ColumnName="apemat_trabajador" />
+          <ScalarProperty Name="sexo_trabajador" ColumnName="sexo_trabajador" />
+          <ScalarProperty Name="dni_trabajador" ColumnName="dni_trabajador" />
+          <ScalarProperty Name="correo_trabajador" ColumnName="correo_trabajador" />
+          <ScalarProperty Name="fecnac_trabajador" ColumnName="fecnac_trabajador" />
+          <ScalarProperty Name="feccom_trabajador" ColumnName="feccom_trabajador" />
+          <ScalarProperty Name="estado_trabajador" ColumnName="estado_trabajador" />
+          <ScalarProperty Name="direccion_trabajador" ColumnName="direccion_trabajador" />
+          <ScalarProperty Name="usuario_trabajador" ColumnName="usuario_trabajador" />
+          <ScalarProperty Name="contra_trabajador" ColumnName="contra_trabajador" />
+          <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_usuario">
+      <EntityTypeMapping TypeName="BD_VIAJAPERUModel.tb_usuario">
+        <MappingFragment StoreEntitySet="tb_usuario">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nom_cliente" ColumnName="nom_cliente" />
+          <ScalarProperty Name="apepat_cliente" ColumnName="apepat_cliente" />
+          <ScalarProperty Name="apemat_cliente" ColumnName="apemat_cliente" />
+          <ScalarProperty Name="sexo_cliente" ColumnName="sexo_cliente" />
+          <ScalarProperty Name="dni_cliente" ColumnName="dni_cliente" />
+          <ScalarProperty Name="correo_cliente" ColumnName="correo_cliente" />
+          <ScalarProperty Name="direccion_cliente" ColumnName="direccion_cliente" />
+          <ScalarProperty Name="nrotarjeta_cliente" ColumnName="nrotarjeta_cliente" />
+          <ScalarProperty Name="fecnac_cliente" ColumnName="fecnac_cliente" />
+          <ScalarProperty Name="usuario_cliente" ColumnName="usuario_cliente" />
+          <ScalarProperty Name="contra_cliente" ColumnName="contra_cliente" />
+          <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -205,58 +205,55 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BD_VIAJAPERU.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_VIAJAPERU.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_VIAJAPERU.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_VIAJAPERU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_VIAJAPERU.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\tb_comprobante.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_gturistica.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_hoteles.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_itinerario.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_mediopago.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_mediotrans.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_movilidad.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_paquetes.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_tipo_usuario.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_trabajador.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tb_usuario.cs">
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ViajaPeru.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ViajaPeru.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ViajaPeru.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ViajaPeru.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ViajaPeru.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ViajaPeru.edmx</DependentUpon>
+      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -277,15 +274,15 @@
     <Content Include="imgs\IndexProm\Index_04.jpg" />
     <Content Include="imgs\IndexProm\Index_05.jpg" />
     <Content Include="imgs\IndexProm\Index_06.jpg" />
-    <Content Include="Models\ViajaPeru.Context.tt">
+    <Content Include="Models\BD_VIAJAPERU.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ViajaPeru.edmx</DependentUpon>
-      <LastGenOutput>ViajaPeru.Context.cs</LastGenOutput>
+      <DependentUpon>BD_VIAJAPERU.edmx</DependentUpon>
+      <LastGenOutput>BD_VIAJAPERU.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ViajaPeru.tt">
+    <Content Include="Models\BD_VIAJAPERU.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ViajaPeru.edmx</DependentUpon>
-      <LastGenOutput>ViajaPeru.cs</LastGenOutput>
+      <DependentUpon>BD_VIAJAPERU.edmx</DependentUpon>
+      <LastGenOutput>BD_VIAJAPERU.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -294,12 +291,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\ViajaPeru.edmx">
+    <EntityDeploy Include="Models\BD_VIAJAPERU.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ViajaPeru.Designer.cs</LastGenOutput>
+      <LastGenOutput>BD_VIAJAPERU.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\ViajaPeru.edmx.diagram">
-      <DependentUpon>ViajaPeru.edmx</DependentUpon>
+    <Content Include="Models\BD_VIAJAPERU.edmx.diagram">
+      <DependentUpon>BD_VIAJAPERU.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -349,7 +346,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ViajaPeru\Index.cshtml" />
     <Content Include="Views\ViajaPeru\Login.cshtml" />
-    <Content Include="Views\ViajaPeru\IniciaSession.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

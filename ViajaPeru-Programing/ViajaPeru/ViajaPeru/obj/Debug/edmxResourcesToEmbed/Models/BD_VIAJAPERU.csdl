@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_VIAJAPERUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_comprobante">
+    <Key>
+      <PropertyRef Name="id_comprobante" />
+    </Key>
+    <Property Name="id_comprobante" Type="Int32" Nullable="false" />
+    <Property Name="id_mediopago" Type="Int32" />
+    <Property Name="id_itinerario" Type="Int32" />
+    <NavigationProperty Name="tb_itinerario" Relationship="Self.FK__tb_compro__id_it__2E1BDC42" FromRole="tb_comprobante" ToRole="tb_itinerario" />
+    <NavigationProperty Name="tb_mediopago" Relationship="Self.FK__tb_compro__id_me__2D27B809" FromRole="tb_comprobante" ToRole="tb_mediopago" />
+  </EntityType>
+  <EntityType Name="tb_gturistica">
+    <Key>
+      <PropertyRef Name="id_gturistica" />
+    </Key>
+    <Property Name="id_gturistica" Type="Int32" Nullable="false" />
+    <Property Name="nom_gturistica" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numdias_gturistica" Type="Int32" Nullable="false" />
+    <Property Name="lugar_gturistica" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio_gturistica" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="tb_paquetes" Relationship="Self.FK__tb_paquet__id_gt__20C1E124" FromRole="tb_gturistica" ToRole="tb_paquetes" />
+  </EntityType>
+  <EntityType Name="tb_hoteles">
+    <Key>
+      <PropertyRef Name="id_hotel" />
+    </Key>
+    <Property Name="id_hotel" Type="Int32" Nullable="false" />
+    <Property Name="nom_hotel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nrohabitacion_hotel" Type="Int32" Nullable="false" />
+    <Property Name="direccion_hotel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ubicacion_hotel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio_hotel" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="tb_paquetes" Relationship="Self.FK__tb_paquet__id_ho__1ED998B2" FromRole="tb_hoteles" ToRole="tb_paquetes" />
+  </EntityType>
+  <EntityType Name="tb_itinerario">
+    <Key>
+      <PropertyRef Name="id_itinerario" />
+    </Key>
+    <Property Name="id_itinerario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecsalida_itinerario" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecllegada_itinerario" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lugardestino_itinerario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lugarllegada_itinerario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio_itinerario" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="estado_itinerario" Type="Int32" Nullable="false" />
+    <Property Name="id_mediotrans" Type="Int32" />
+    <Property Name="id_paquete" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="id_trabajador" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_comprobante" Relationship="Self.FK__tb_compro__id_it__2E1BDC42" FromRole="tb_itinerario" ToRole="tb_comprobante" />
+    <NavigationProperty Name="tb_mediotrans" Relationship="Self.FK__tb_itiner__id_me__25869641" FromRole="tb_itinerario" ToRole="tb_mediotrans" />
+    <NavigationProperty Name="tb_paquetes" Relationship="Self.FK__tb_itiner__id_pa__267ABA7A" FromRole="tb_itinerario" ToRole="tb_paquetes" />
+    <NavigationProperty Name="tb_trabajador" Relationship="Self.FK__tb_itiner__id_tr__286302EC" FromRole="tb_itinerario" ToRole="tb_trabajador" />
+    <NavigationProperty Name="tb_usuario" Relationship="Self.FK__tb_itiner__id_us__276EDEB3" FromRole="tb_itinerario" ToRole="tb_usuario" />
+  </EntityType>
+  <EntityType Name="tb_mediopago">
+    <Key>
+      <PropertyRef Name="id_mediopago" />
+    </Key>
+    <Property Name="id_mediopago" Type="Int32" Nullable="false" />
+    <Property Name="des_mediopago" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tb_comprobante" Relationship="Self.FK__tb_compro__id_me__2D27B809" FromRole="tb_mediopago" ToRole="tb_comprobante" />
+  </EntityType>
+  <EntityType Name="tb_mediotrans">
+    <Key>
+      <PropertyRef Name="id_mediotrans" />
+    </Key>
+    <Property Name="id_mediotrans" Type="Int32" Nullable="false" />
+    <Property Name="des_mediotrans" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tb_itinerario" Relationship="Self.FK__tb_itiner__id_me__25869641" FromRole="tb_mediotrans" ToRole="tb_itinerario" />
+  </EntityType>
+  <EntityType Name="tb_movilidad">
+    <Key>
+      <PropertyRef Name="id_movilidad" />
+    </Key>
+    <Property Name="id_movilidad" Type="Int32" Nullable="false" />
+    <Property Name="nomchofer_movilidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numplaca_movilidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccionchofer_movilidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio_movilidad" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="tb_paquetes" Relationship="Self.FK__tb_paquet__id_mo__1FCDBCEB" FromRole="tb_movilidad" ToRole="tb_paquetes" />
+  </EntityType>
+  <EntityType Name="tb_paquetes">
+    <Key>
+      <PropertyRef Name="id_paquete" />
+    </Key>
+    <Property Name="id_paquete" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="precio_paquete" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="id_hotel" Type="Int32" />
+    <Property Name="id_movilidad" Type="Int32" />
+    <Property Name="id_gturistica" Type="Int32" />
+    <NavigationProperty Name="tb_gturistica" Relationship="Self.FK__tb_paquet__id_gt__20C1E124" FromRole="tb_paquetes" ToRole="tb_gturistica" />
+    <NavigationProperty Name="tb_hoteles" Relationship="Self.FK__tb_paquet__id_ho__1ED998B2" FromRole="tb_paquetes" ToRole="tb_hoteles" />
+    <NavigationProperty Name="tb_itinerario" Relationship="Self.FK__tb_itiner__id_pa__267ABA7A" FromRole="tb_paquetes" ToRole="tb_itinerario" />
+    <NavigationProperty Name="tb_movilidad" Relationship="Self.FK__tb_paquet__id_mo__1FCDBCEB" FromRole="tb_paquetes" ToRole="tb_movilidad" />
+  </EntityType>
+  <EntityType Name="tb_tipo_usuario">
+    <Key>
+      <PropertyRef Name="id_tipo" />
+    </Key>
+    <Property Name="id_tipo" Type="Int32" Nullable="false" />
+    <Property Name="des_tipo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tb_trabajador" Relationship="Self.FK__tb_trabaj__id_ti__164452B1" FromRole="tb_tipo_usuario" ToRole="tb_trabajador" />
+    <NavigationProperty Name="tb_usuario" Relationship="Self.FK__tb_usuari__id_ti__1273C1CD" FromRole="tb_tipo_usuario" ToRole="tb_usuario" />
+  </EntityType>
+  <EntityType Name="tb_trabajador">
+    <Key>
+      <PropertyRef Name="id_trabajador" />
+    </Key>
+    <Property Name="id_trabajador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apepat_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apemat_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sexo_trabajador" Type="Int32" Nullable="false" />
+    <Property Name="dni_trabajador" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecnac_trabajador" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="feccom_trabajador" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="estado_trabajador" Type="Int32" Nullable="false" />
+    <Property Name="direccion_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="contra_trabajador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="id_tipo" Type="Int32" />
+    <NavigationProperty Name="tb_itinerario" Relationship="Self.FK__tb_itiner__id_tr__286302EC" FromRole="tb_trabajador" ToRole="tb_itinerario" />
+    <NavigationProperty Name="tb_tipo_usuario" Relationship="Self.FK__tb_trabaj__id_ti__164452B1" FromRole="tb_trabajador" ToRole="tb_tipo_usuario" />
+  </EntityType>
+  <EntityType Name="tb_usuario">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apepat_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apemat_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sexo_cliente" Type="Int32" Nullable="false" />
+    <Property Name="dni_cliente" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nrotarjeta_cliente" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecnac_cliente" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="usuario_cliente" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contra_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_tipo" Type="Int32" />
+    <NavigationProperty Name="tb_itinerario" Relationship="Self.FK__tb_itiner__id_us__276EDEB3" FromRole="tb_usuario" ToRole="tb_itinerario" />
+    <NavigationProperty Name="tb_tipo_usuario" Relationship="Self.FK__tb_usuari__id_ti__1273C1CD" FromRole="tb_usuario" ToRole="tb_tipo_usuario" />
+  </EntityType>
+  <Association Name="FK__tb_compro__id_it__2E1BDC42">
+    <End Role="tb_itinerario" Type="Self.tb_itinerario" Multiplicity="0..1" />
+    <End Role="tb_comprobante" Type="Self.tb_comprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_itinerario">
+        <PropertyRef Name="id_itinerario" />
+      </Principal>
+      <Dependent Role="tb_comprobante">
+        <PropertyRef Name="id_itinerario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_compro__id_me__2D27B809">
+    <End Role="tb_mediopago" Type="Self.tb_mediopago" Multiplicity="0..1" />
+    <End Role="tb_comprobante" Type="Self.tb_comprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_mediopago">
+        <PropertyRef Name="id_mediopago" />
+      </Principal>
+      <Dependent Role="tb_comprobante">
+        <PropertyRef Name="id_mediopago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_paquet__id_gt__20C1E124">
+    <End Role="tb_gturistica" Type="Self.tb_gturistica" Multiplicity="0..1" />
+    <End Role="tb_paquetes" Type="Self.tb_paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_gturistica">
+        <PropertyRef Name="id_gturistica" />
+      </Principal>
+      <Dependent Role="tb_paquetes">
+        <PropertyRef Name="id_gturistica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_paquet__id_ho__1ED998B2">
+    <End Role="tb_hoteles" Type="Self.tb_hoteles" Multiplicity="0..1" />
+    <End Role="tb_paquetes" Type="Self.tb_paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_hoteles">
+        <PropertyRef Name="id_hotel" />
+      </Principal>
+      <Dependent Role="tb_paquetes">
+        <PropertyRef Name="id_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_itiner__id_me__25869641">
+    <End Role="tb_mediotrans" Type="Self.tb_mediotrans" Multiplicity="0..1" />
+    <End Role="tb_itinerario" Type="Self.tb_itinerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_mediotrans">
+        <PropertyRef Name="id_mediotrans" />
+      </Principal>
+      <Dependent Role="tb_itinerario">
+        <PropertyRef Name="id_mediotrans" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_itiner__id_pa__267ABA7A">
+    <End Role="tb_paquetes" Type="Self.tb_paquetes" Multiplicity="1" />
+    <End Role="tb_itinerario" Type="Self.tb_itinerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_paquetes">
+        <PropertyRef Name="id_paquete" />
+      </Principal>
+      <Dependent Role="tb_itinerario">
+        <PropertyRef Name="id_paquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_itiner__id_tr__286302EC">
+    <End Role="tb_trabajador" Type="Self.tb_trabajador" Multiplicity="1" />
+    <End Role="tb_itinerario" Type="Self.tb_itinerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_trabajador">
+        <PropertyRef Name="id_trabajador" />
+      </Principal>
+      <Dependent Role="tb_itinerario">
+        <PropertyRef Name="id_trabajador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_itiner__id_us__276EDEB3">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_itinerario" Type="Self.tb_itinerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_itinerario">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_paquet__id_mo__1FCDBCEB">
+    <End Role="tb_movilidad" Type="Self.tb_movilidad" Multiplicity="0..1" />
+    <End Role="tb_paquetes" Type="Self.tb_paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_movilidad">
+        <PropertyRef Name="id_movilidad" />
+      </Principal>
+      <Dependent Role="tb_paquetes">
+        <PropertyRef Name="id_movilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_trabaj__id_ti__164452B1">
+    <End Role="tb_tipo_usuario" Type="Self.tb_tipo_usuario" Multiplicity="0..1" />
+    <End Role="tb_trabajador" Type="Self.tb_trabajador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipo_usuario">
+        <PropertyRef Name="id_tipo" />
+      </Principal>
+      <Dependent Role="tb_trabajador">
+        <PropertyRef Name="id_tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tb_usuari__id_ti__1273C1CD">
+    <End Role="tb_tipo_usuario" Type="Self.tb_tipo_usuario" Multiplicity="0..1" />
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipo_usuario">
+        <PropertyRef Name="id_tipo" />
+      </Principal>
+      <Dependent Role="tb_usuario">
+        <PropertyRef Name="id_tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_VIAJAPERUEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_comprobante" EntityType="Self.tb_comprobante" />
+    <EntitySet Name="tb_gturistica" EntityType="Self.tb_gturistica" />
+    <EntitySet Name="tb_hoteles" EntityType="Self.tb_hoteles" />
+    <EntitySet Name="tb_itinerario" EntityType="Self.tb_itinerario" />
+    <EntitySet Name="tb_mediopago" EntityType="Self.tb_mediopago" />
+    <EntitySet Name="tb_mediotrans" EntityType="Self.tb_mediotrans" />
+    <EntitySet Name="tb_movilidad" EntityType="Self.tb_movilidad" />
+    <EntitySet Name="tb_paquetes" EntityType="Self.tb_paquetes" />
+    <EntitySet Name="tb_tipo_usuario" EntityType="Self.tb_tipo_usuario" />
+    <EntitySet Name="tb_trabajador" EntityType="Self.tb_trabajador" />
+    <EntitySet Name="tb_usuario" EntityType="Self.tb_usuario" />
+    <AssociationSet Name="FK__tb_compro__id_it__2E1BDC42" Association="Self.FK__tb_compro__id_it__2E1BDC42">
+      <End Role="tb_itinerario" EntitySet="tb_itinerario" />
+      <End Role="tb_comprobante" EntitySet="tb_comprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_compro__id_me__2D27B809" Association="Self.FK__tb_compro__id_me__2D27B809">
+      <End Role="tb_mediopago" EntitySet="tb_mediopago" />
+      <End Role="tb_comprobante" EntitySet="tb_comprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_paquet__id_gt__20C1E124" Association="Self.FK__tb_paquet__id_gt__20C1E124">
+      <End Role="tb_gturistica" EntitySet="tb_gturistica" />
+      <End Role="tb_paquetes" EntitySet="tb_paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_paquet__id_ho__1ED998B2" Association="Self.FK__tb_paquet__id_ho__1ED998B2">
+      <End Role="tb_hoteles" EntitySet="tb_hoteles" />
+      <End Role="tb_paquetes" EntitySet="tb_paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_itiner__id_me__25869641" Association="Self.FK__tb_itiner__id_me__25869641">
+      <End Role="tb_mediotrans" EntitySet="tb_mediotrans" />
+      <End Role="tb_itinerario" EntitySet="tb_itinerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_itiner__id_pa__267ABA7A" Association="Self.FK__tb_itiner__id_pa__267ABA7A">
+      <End Role="tb_paquetes" EntitySet="tb_paquetes" />
+      <End Role="tb_itinerario" EntitySet="tb_itinerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_itiner__id_tr__286302EC" Association="Self.FK__tb_itiner__id_tr__286302EC">
+      <End Role="tb_trabajador" EntitySet="tb_trabajador" />
+      <End Role="tb_itinerario" EntitySet="tb_itinerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_itiner__id_us__276EDEB3" Association="Self.FK__tb_itiner__id_us__276EDEB3">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_itinerario" EntitySet="tb_itinerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_paquet__id_mo__1FCDBCEB" Association="Self.FK__tb_paquet__id_mo__1FCDBCEB">
+      <End Role="tb_movilidad" EntitySet="tb_movilidad" />
+      <End Role="tb_paquetes" EntitySet="tb_paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_trabaj__id_ti__164452B1" Association="Self.FK__tb_trabaj__id_ti__164452B1">
+      <End Role="tb_tipo_usuario" EntitySet="tb_tipo_usuario" />
+      <End Role="tb_trabajador" EntitySet="tb_trabajador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tb_usuari__id_ti__1273C1CD" Association="Self.FK__tb_usuari__id_ti__1273C1CD">
+      <End Role="tb_tipo_usuario" EntitySet="tb_tipo_usuario" />
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

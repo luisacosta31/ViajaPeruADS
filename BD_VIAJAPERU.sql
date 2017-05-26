@@ -38,6 +38,7 @@ correo_cliente varchar(30) not null,
 direccion_cliente varchar(30) not null,
 nrotarjeta_cliente varchar(19) not null,
 fecnac_cliente date not null,
+usuario_cliente varchar(10) not null,
 contra_cliente varchar(30) not null,
 id_tipo int references tb_tipo_usuario default 2
 )
