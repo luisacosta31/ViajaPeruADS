@@ -27,28 +27,34 @@ namespace ViajaPeru.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(tb_usuario usuario, tb_trabajador trabajador)
+        public ActionResult Login(tb_usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                var t = modelo.tb_trabajador.Where(a => a.usuario_trabajador.Equals(trabajador.usuario_trabajador) && a.contra_trabajador.Equals(trabajador.contra_trabajador)).FirstOrDefault();
+                //var t = modelo.tb_trabajador.Where(a => a.usuario_trabajador.Equals(trabajador.usuario_trabajador) && a.contra_trabajador.Equals(trabajador.contra_trabajador)).FirstOrDefault();
                 var v = modelo.tb_usuario.Where(a => a.usuario_cliente.Equals(usuario.usuario_cliente) && a.contra_cliente.Equals(usuario.contra_cliente)).FirstOrDefault();
                 if (v != null)
                 {
                     Session["LogedUserID"] = v.usuario_cliente.ToString();
-                    return RedirectToAction("Lista");
+                    return RedirectToAction("Index_Login");
                 }
-                else if (t != null)
-                {
-                    Session["LogedUserID"] = v.usuario_cliente.ToString();
-                    return RedirectToAction("Lista");
-                }
+                //else if (t != null)
+                //{
+                //    Session["LogedUserID"] = v.usuario_cliente.ToString();
+                //    return RedirectToAction("Index_Login");
+                //}
                 else
                 {
                     return RedirectToAction("Login");
                 }
             }
             return View(usuario);
+        }
+
+        public ActionResult Index_Login()
+        {
+
+            return View();
         }
     }
 }

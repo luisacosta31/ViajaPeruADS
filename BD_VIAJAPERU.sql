@@ -42,7 +42,10 @@ usuario_cliente varchar(10) not null,
 contra_cliente varchar(30) not null,
 id_tipo int references tb_tipo_usuario default 2
 )
+insert into tb_usuario values ('Luis', 'Acosta', 'Argote',0,'70844569','holamundo', 'calle 46','1234-5678-9012-3456', getdate(),'lacosta', 'Demo1234', 2)
+go
 
+select * from tb_usuario
 if OBJECT_ID('tb_trabajador') is not null
 	drop table tb_trabajador
 go

@@ -345,6 +345,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ViajaPeru\Index.cshtml" />
+    <Content Include="Views\Shared\_AfterLogin.cshtml" />
+    <Content Include="Views\ViajaPeru\Index_Login.cshtml" />
     <Content Include="Views\ViajaPeru\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -397,10 +399,9 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
 </Project>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+<!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  

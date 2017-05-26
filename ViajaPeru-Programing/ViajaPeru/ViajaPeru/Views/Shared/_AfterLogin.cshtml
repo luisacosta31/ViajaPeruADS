@@ -27,9 +27,11 @@
                 <li><a href="#">Sobre Nosotros</a></li>
                 <li><a href="#">Nuestras Promociones</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>@Html.ActionLink("Registrate", "Create_User")</li>
-                <li>@Html.ActionLink("Iniciar Session", "Login")</li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Session["LogedUserID"].ToString() <span class="caret"></span></a>
+            <ul class="dropdown-menu navbar-right">
+                <li>Editar Cuneta</li>
+                <li>Historial de Viajes</li>
+                <li>@Html.ActionLink("Cerrar Sesion", "Login")</li>
             </ul>
         </div>
     </nav>
