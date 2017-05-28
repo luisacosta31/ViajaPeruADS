@@ -7,7 +7,7 @@
     <title>ViajaPeru</title>
     @Scripts.Render("~/bundles/modernizr")
 
-
+    <link rel="icon" href="~/imgs/Logo/logo.png" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -21,18 +21,22 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/ViajaPeru/Index"><strong style="color:red">Viaja<strong style="color:white">Peru</strong></strong></a>
+                <a class="navbar-brand" href="/ViajaPeru/Index_Login"><strong style="color:red">Viaja<strong style="color:white">Peru</strong></strong></a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Nuestras Promociones</a></li>
+                <li>@Html.ActionLink("Sobre Nosotros", "About2")</li>
+                <li><a href="#">Galeria</a></li>
             </ul>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Session["LogedUserID"].ToString() <span class="caret"></span></a>
-            <ul class="dropdown-menu navbar-right">
-                <li>Editar Cuneta</li>
-                <li>Historial de Viajes</li>
-                <li>@Html.ActionLink("Cerrar Sesion", "Login")</li>
-            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Session["LogedUserID"].ToString()<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Editar Cuenta", "Index_Login")</li>
+                        <li>@Html.ActionLink("Historial de Viajes", "Index_Login")</li>
+                        <li>@Html.ActionLink("Cerrar Sesion", "Index")</li>
+                    </ul>
+                </li>
+            </ul>          
         </div>
     </nav>
 
@@ -63,17 +67,6 @@
             </div>
         </div>
     </div>
-    <script>
-        $('#exampleModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('whatever') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            modal.find('.modal-title').text('New message to ' + recipient)
-            modal.find('.modal-body input').val(recipient)
-        })
-    </script>
     <div class="container body-content">
         @RenderBody()
         <hr />

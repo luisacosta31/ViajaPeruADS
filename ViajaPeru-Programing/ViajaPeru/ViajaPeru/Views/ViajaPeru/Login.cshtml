@@ -4,28 +4,43 @@
     ViewBag.Title = "Login";
 }
 
+
 <h2>Login</h2>
 
-<h2 style="color:red">Login</h2>
-<table>
-    <tr>
-        <td style="color:white">Usuario</td>
-        <td>@Html.EditorFor(a => a.usuario_cliente)</td>
-    </tr>
-    <tr>
-        @Html.ValidationMessageFor(a => a.usuario_cliente)
-    </tr>
-    <tr>
-        <td style="color:white">Contraseña</td>
-        <td>@Html.PasswordFor(a => a.contra_cliente)</td>
-    </tr>
-    <tr>
-        @Html.ValidationMessageFor(a => a.contra_cliente)
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <input class="btn btn-default" type="submit" value="Login" onclick="" />
-        </td>
-    </tr>
-</table>
+@using (Html.BeginForm("Login", "ViajaPeru", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    if (@ViewBag.Message != null)
+    {
+        <div style="border: 1px solid red">
+            @ViewBag.Message
+        </div>
+    }
+
+    <table>
+        <tr>
+            <td>Usuario</td>
+            <td>
+                @Html.EditorFor(a => a.usuario_cliente)
+                @Html.ValidationMessageFor(Model => Model.usuario_cliente)
+            </td>
+        </tr>
+        <tr>
+            <td>Contraseña</td>
+            <td>@Html.PasswordFor(a => a.contra_cliente)</td>
+        </tr>
+        <tr>
+            @Html.ValidationMessageFor(a => a.contra_cliente)
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+}
+
+@* This below line is for create javascript section*@
+

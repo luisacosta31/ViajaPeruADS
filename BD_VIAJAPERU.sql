@@ -37,34 +37,16 @@ dni_cliente varchar(8) not null,
 correo_cliente varchar(30) not null,
 direccion_cliente varchar(30) not null,
 nrotarjeta_cliente varchar(19) not null,
+estado_cliente int not null,/*Activo o no activo*/
 fecnac_cliente date not null,
 usuario_cliente varchar(10) not null,
 contra_cliente varchar(30) not null,
 id_tipo int references tb_tipo_usuario default 2
 )
-insert into tb_usuario values ('Luis', 'Acosta', 'Argote',0,'70844569','holamundo', 'calle 46','1234-5678-9012-3456', getdate(),'lacosta', 'Demo1234', 2)
+insert into tb_usuario values ('Luis', 'Acosta', 'Argote',0,'70844569','holamundo', 'calle 46','1234-5678-9012-3456', 0 ,getdate(),'lacosta', 'Demo1234', 2)
 go
 
 select * from tb_usuario
-if OBJECT_ID('tb_trabajador') is not null
-	drop table tb_trabajador
-go
-create table tb_trabajador(
-id_trabajador int primary key identity(1,1),
-nom_trabajador varchar(30) not null,
-apepat_trabajador varchar(30) not null,
-apemat_trabajador varchar(30) not null,
-sexo_trabajador int not null,
-dni_trabajador varchar(8) not null,
-correo_trabajador varchar(30) not null,
-fecnac_trabajador date not null,
-feccom_trabajador date not null,
-estado_trabajador int not null,/*Activo o no activo*/
-direccion_trabajador varchar(30),
-usuario_trabajador varchar(30),
-contra_trabajador varchar(30),
-id_tipo int references tb_tipo_usuario
-)
 
 if OBJECT_ID('tb_hoteles') is not null
 	drop table tb_hoteles
@@ -133,8 +115,7 @@ estado_itinerario int not null,
 --references
 id_mediotrans int references tb_mediotrans,
 id_paquete int references tb_paquetes not null,
-id_usuario int references tb_usuario not null,
-id_trabajador int references tb_trabajador not null
+id_usuario int references tb_usuario not null
 )
 
 

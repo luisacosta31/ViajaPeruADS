@@ -30,13 +30,11 @@ namespace ViajaPeru.Models
         public Nullable<int> id_mediotrans { get; set; }
         public int id_paquete { get; set; }
         public int id_usuario { get; set; }
-        public int id_trabajador { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_comprobante> tb_comprobante { get; set; }
         public virtual tb_mediotrans tb_mediotrans { get; set; }
         public virtual tb_paquetes tb_paquetes { get; set; }
-        public virtual tb_trabajador tb_trabajador { get; set; }
         public virtual tb_usuario tb_usuario { get; set; }
     }
 }

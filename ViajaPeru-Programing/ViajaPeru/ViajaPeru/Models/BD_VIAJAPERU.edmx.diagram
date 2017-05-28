@@ -4,28 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="699bc62757c84878a28500cdd2e7c5f0" Name="Diagram1">
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_comprobante" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_gturistica" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_hoteles" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_itinerario" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_mediopago" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_mediotrans" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_movilidad" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_paquetes" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_tipo_usuario" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_trabajador" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_usuario" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_compro__id_it__2E1BDC42" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_compro__id_me__2D27B809" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_gt__20C1E124" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_ho__1ED998B2" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_me__25869641" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_pa__267ABA7A" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_tr__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_us__276EDEB3" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_mo__1FCDBCEB" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_trabaj__id_ti__164452B1" ManuallyRouted="false" />
+      <Diagram DiagramId="adb641c66d7b4c06acf2051b3fc56c99" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_comprobante" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_gturistica" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_hoteles" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_itinerario" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_mediopago" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_mediotrans" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_movilidad" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_paquetes" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_tipo_usuario" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_VIAJAPERUModel.tb_usuario" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_compro__id_it__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_compro__id_me__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_gt__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_ho__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_me__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_pa__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_itiner__id_us__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_paquet__id_mo__1CF15040" ManuallyRouted="false" />
         <AssociationConnector Association="BD_VIAJAPERUModel.FK__tb_usuari__id_ti__1273C1CD" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

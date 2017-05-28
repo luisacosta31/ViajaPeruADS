@@ -249,9 +249,6 @@
     <Compile Include="Models\tb_tipo_usuario.cs">
       <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\tb_trabajador.cs">
-      <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\tb_usuario.cs">
       <DependentUpon>BD_VIAJAPERU.tt</DependentUpon>
     </Compile>
@@ -274,6 +271,7 @@
     <Content Include="imgs\IndexProm\Index_04.jpg" />
     <Content Include="imgs\IndexProm\Index_05.jpg" />
     <Content Include="imgs\IndexProm\Index_06.jpg" />
+    <Content Include="imgs\Logo\logo.png" />
     <Content Include="Models\BD_VIAJAPERU.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BD_VIAJAPERU.edmx</DependentUpon>
@@ -310,6 +308,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\html\About.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -348,6 +347,9 @@
     <Content Include="Views\Shared\_AfterLogin.cshtml" />
     <Content Include="Views\ViajaPeru\Index_Login.cshtml" />
     <Content Include="Views\ViajaPeru\Login.cshtml" />
+    <Content Include="Views\ViajaPeru\Create_User.cshtml" />
+    <Content Include="Views\ViajaPeru\About.cshtml" />
+    <Content Include="Views\ViajaPeru\About2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

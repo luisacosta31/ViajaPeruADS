@@ -17,15 +17,12 @@ namespace ViajaPeru.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_tipo_usuario()
         {
-            this.tb_trabajador = new HashSet<tb_trabajador>();
             this.tb_usuario = new HashSet<tb_usuario>();
         }
     
         public int id_tipo { get; set; }
         public string des_tipo { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_trabajador> tb_trabajador { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_usuario> tb_usuario { get; set; }
     }

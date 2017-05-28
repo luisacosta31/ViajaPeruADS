@@ -27,7 +27,7 @@
                 <a class="navbar-brand" href="/ViajaPeru/Index"><strong style="color:red">Viaja<strong style="color:white">Peru</strong></strong></a>
             </div>
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Sobre Nosotros", "About")</li>
+                <li><a href="About.html">Sobre Nosotros</a></li>
                 <li><a href="#">Galeria</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -37,47 +37,37 @@
         </div>
     </nav>
 
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h4>
+    <div class="container body-content">
+        <!-- Container (About Section) -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>MISIÓN: </h2>
+                    <p>Nuestra empresa Viaja Perú está asociada al rubro turístico, cuya función es la de organizar y vender paquetes turísticos en el que se puede tratar directamente con los clientes, pueden ir desde un simple viaje hasta un paquete de viajes completo en donde incluirá además del viaje la estancia en hoteles, reservas de automóviles, transporte por tierra y por mar.</p>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="control-label">Usuario:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Usuario...">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="control-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="recipient-name" placeholder="Contraseña...">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Entrar</button>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-signal logo"></span>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-    </div>
 
+        <div class="container-fluid bg-grey">
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-globe logo"></span>
+                </div>
+                <div class="col-sm-8">
+                    <h2>VISIÓN</h2>
+                    <p>LLegar a ser un agencia de viajes que lidera el mercado nacional y mantiene cubierto el mercado regional agilizando los procesos de venta. Brindar un servicio de buena calidad para nuestros posibles usuarios mediante diferentes medios de accesos y generar mercado para poder expandirnos a nivel nacional.</p>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 
     <hr />
     <footer>

@@ -34,7 +34,6 @@ namespace ViajaPeru.Models
         public virtual DbSet<tb_movilidad> tb_movilidad { get; set; }
         public virtual DbSet<tb_paquetes> tb_paquetes { get; set; }
         public virtual DbSet<tb_tipo_usuario> tb_tipo_usuario { get; set; }
-        public virtual DbSet<tb_trabajador> tb_trabajador { get; set; }
         public virtual DbSet<tb_usuario> tb_usuario { get; set; }
     }
 }
