@@ -298,6 +298,6 @@ C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\Viaja
 C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\obj\Debug\ViajaPeru.csprojResolveAssemblyReference.cache
 C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\obj\Debug\ViajaPeru.dll
 C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\obj\Debug\ViajaPeru.pdb
+C:\Users\Jano\Documents\GitHub\ViajaPeruADS\ViajaPeru-Programing\ViajaPeru\ViajaPeru\obj\Debug\ViajaPeru.csprojResolveAssemblyReference.cache
