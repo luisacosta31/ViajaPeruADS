@@ -31,19 +31,21 @@ namespace ViajaPeru.Controllers
         {
             if (ModelState.IsValid)
             {
+                
+                //var t = modelo.tb_trabajador.Where(a => a.usuario_trabajador.Equals(trabajador.usuario_trabajador) && a.contra_trabajador.Equals(trabajador.contra_trabajador)).FirstOrDefault();
                 var v = modelo.tb_usuario.Where(a => a.usuario_cliente.Equals(usuario.usuario_cliente) && a.contra_cliente.Equals(usuario.contra_cliente)).FirstOrDefault();
                 if (v != null)
                 {
-                    Session["LogedUserID"] = v.nom_cliente + " " + v.apepat_cliente.ToString();
-                    return RedirectToAction("Index_Login");
-                    //if ()
-                    //{
-                    //    return RedirectToAction("Index_Login_Administrador");
-                    //}
-                    //else
-                    //{
-                    //    return RedirectToAction("Index_Login");
-                    //}
+                    if (v.id_tipo == 1)
+                    {
+                        Session["LogedUserID"] = v.nom_cliente + " " + v.apepat_cliente.ToString();
+                        return RedirectToAction("Index_Login");
+                    }
+                    else
+                    {
+                        Session["LogedUserID"] = v.nom_cliente + " " + v.apepat_cliente.ToString();
+                        return View("Index_Login_Administrador");
+                    }
 
                 }
                 else
@@ -55,13 +57,6 @@ namespace ViajaPeru.Controllers
         }
 
         public ActionResult Index_Login()
-        {
-
-            return View();
-        }
-
-
-        public ActionResult Index_Login_Administrador()
         {
 
             return View();
